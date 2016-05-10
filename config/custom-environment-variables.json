@@ -1,0 +1,21 @@
+{
+  "trax-jobs-db": {
+    "host": "MONGO_ACTIVITIES_PORT_27017_TCP_ADDR",
+    "port": "MONGO_ACTIVITIES_PORT_27017_TCP_PORT"
+  },
+
+  "trax-jobs-archive-db": {
+    "host": "MONGO_ACTIVITIES_PORT_27017_TCP_ADDR",
+    "port": "MONGO_ACTIVITIES_PORT_27017_TCP_PORT"
+  },
+
+  "trax-util-db": {
+    "host": "MONGO_ACTIVITIES_PORT_27017_TCP_ADDR",
+    "port": "MONGO_ACTIVITIES_PORT_27017_TCP_PORT"
+  },
+
+  "trax-documents-db": {
+    "host": "MONGO_ACTIVITIES_PORT_27017_TCP_ADDR",
+    "port": "MONGO_ACTIVITIES_PORT_27017_TCP_PORT"
+  }
+}

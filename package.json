@@ -1,0 +1,56 @@
+{
+  "name": "jobs-api",
+  "version": "0.0.1",
+  "description": "API layer for the Trax workflow application",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/.bin/mocha test",
+    "start": "node_modules/.bin/nodemon index.js",
+    "regen": "node_modules/.bin/pgen exec sequelize-template --host 172.17.42.1 -d trax -u postgres -p password -t dao/ctrl"
+  },
+  "keywords": [
+    "api",
+    "trax",
+    "jobs",
+    "workflow"
+  ],
+  "author": "Firstmac Limited",
+  "license": "ISC",
+  "dependencies": {
+    "bunyan": "^1.5.1",
+    "config": "^1.17.1",
+    "extend": "^3.0.0",
+    "fm-api-common": "git://github.com/firstmac/fm-api-common.git",
+    "gridfs-stream": "^1.1.1",
+    "https": "^1.0.0",
+    "lodash": "^3.10.1",
+    "md5": "^2.1.0",
+    "moment": "^2.12.0",
+    "moment-duration-format": "^1.3.0",
+    "moment-timezone": "^0.5.3",
+    "mongoose": "^4.4.4",
+    "nock": "^7.7.3",
+    "owl-deepcopy": "0.0.4",
+    "passport-http-bearer": "^1.0.1",
+    "pg": "^4.5.1",
+    "pg-hstore": "^2.3.2",
+    "q": "^1.4.1",
+    "request": "^2.67.0",
+    "request-promise": "^2.0.1",
+    "require-all": "^2.0.0",
+    "restify": "^4.0.3",
+    "restify-bunyan-logger": "^2.0.7",
+    "restify-jwt": "^0.4.0",
+    "sequelize": "^3.19.3",
+    "sinon": "^1.17.3",
+    "streamifier": "^0.1.1",
+    "xml2js": "^0.4.16"
+  },
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "hippie": "^0.4.0",
+    "mocha": "^2.2.5",
+    "nodemon": "^1.8.0",
+    "pg-generator": "^3.2.3"
+  }
+}

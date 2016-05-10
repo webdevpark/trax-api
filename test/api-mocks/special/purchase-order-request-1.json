@@ -1,0 +1,24 @@
+{
+  "PurchaseOrderFormTypeId": 1,
+  "CompanyId": 1,
+  "Notes": "notes",
+  "OrderDate": "2016-01-31",
+  "DepartmentId": 1,
+  "VendorName": "the vendor",
+  "VendorReference": "vendor reference",
+  "LineItems": [{
+    "Description": "line item description",
+    "Price": 20,
+    "Tax": 1.1
+  }],
+  "Attachments": [
+    {
+      "filename":"attachment1",
+      "bytes":[1]
+    },
+    {
+      "filename":"attachment1",
+      "bytes":[2]
+    }
+  ]
+}

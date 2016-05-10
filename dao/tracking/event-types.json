@@ -1,0 +1,21 @@
+{
+  "NONE": 0,
+  "LOGIN": 1,
+  "LOGOUT": 2,
+  "BREAK": 3,
+  "LUNCH": 4,
+  "COFFEE": 5,
+  "VACATION": 6,
+  "DELIVERY": 7,
+  "DIALLING": 8,
+  "CONNECTED": 9,
+  "HANGUP": 10,
+  "DISCONNECTED": 11,
+  "EDITING": 12,
+  "MEETING_TEAM": 13,
+  "MEETING_OTHER": 14,
+  "TRAINING_COACHING": 15,
+  "SCENARIO": 16,
+  "RECEPTION": 17,
+  "PERSONAL_BREAK": 18
+}

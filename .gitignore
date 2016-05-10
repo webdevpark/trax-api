@@ -1,0 +1,4 @@
+node_modules
+sequelize-template
+*.log
+.npmrc

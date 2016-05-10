@@ -1,0 +1,20 @@
+{
+  "Schedule":{
+    "Description": "need this to recur because XYZ",
+    "StartDate": "20160101",
+    "EndDate":"20160301",
+    "MaxNumOccurrences": 2,
+    "Interval": 3,
+    "RecurrenceFrequencyType": 1
+  },
+  "JobTemplate":{
+    "Title": "Job for unit test fixture",
+    "Description": "This job should be ignored. It only exists for unit testing",
+    "JobType":
+    {
+      "JobTypeId":388,
+      "Description":"Advance / Arrears position adjustment",
+      "TypeCode":"Operations"
+    }
+  }
+}

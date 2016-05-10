@@ -1,0 +1,49 @@
+{
+  "Sent":
+  {
+    "User":
+    {
+      "TontoUserId": 1,
+      "EmailAddress": "sender@test.com"
+    },
+    "When": "2016-03-01T00:00:00.000Z"
+  },
+  "Recipient":
+  {
+    "TontoUserId": 2,
+    "EmailAddress": "recipient@test.com"
+  },
+  "Delivered":
+  {
+    "User":
+    {
+      "TontoUserId": 3,
+      "EmailAddress": "delivered@test.com"
+    },
+    "When": "2016-04-010T00:00:00.000Z"
+  },
+  "Acknowledged":
+  {
+    "User":
+    {
+      "TontoUserId": 4,
+      "EmailAddress": "acknowledged@test.com"
+    },
+    "When": "2016-04-015T00:00:00.000Z"
+  },
+  "Retracted":
+  {
+    "User":
+    {
+      "TontoUserId": 5,
+      "EmailAddress": "retracted@test.com"
+    },
+    "When": "2016-04-020T00:00:00.000Z"
+  },
+  "Expiry": "2.17:00:00",
+  "Persistent": true,
+  "TypeOfMessage": 1,
+  "Subject": "test message subject",
+  "Body": "test message body",
+  "JobId": "56fdc77b3502b61600dbbf99"
+}

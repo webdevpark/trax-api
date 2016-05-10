@@ -1,0 +1,9 @@
+{
+  "To": "standard.user@firstmac.com.au",
+  "MessageType": 1,
+  "JobId": null,
+  "Subject": "message subject",
+  "Body": "message body",
+  "Persistent": true,
+  "DurationMillis": 600000
+}

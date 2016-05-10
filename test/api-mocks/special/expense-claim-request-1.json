@@ -1,0 +1,24 @@
+{
+  "DepartmentId": 1,
+  "Notes": "notes",
+  "Period": {
+    "From": "2016-01-01",
+    "To": "2016-03-31"
+  },
+  "Expenses": [{
+    "Description": "expense description",
+    "Cost": 20,
+    "Category": 1,
+    "When": "2016-02-20"
+  }],
+  "Attachments": [
+    {
+      "filename":"attachment1",
+      "bytes":[1]
+    },
+    {
+      "filename":"attachment1",
+      "bytes":[2]
+    }
+  ]
+}

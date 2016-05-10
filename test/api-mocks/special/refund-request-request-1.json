@@ -1,0 +1,23 @@
+{
+  "DepartmentId": 1,
+  "Identities":{
+    "TontoApplicationId": ["123456"]
+  },
+  "Attachments": [
+    {
+      "filename":"attachment1",
+      "bytes":[1]
+    },
+    {
+      "filename":"attachment1",
+      "bytes":[2]
+    }
+  ],
+  "Amount": 123.45,
+  "WriteOffTypeId": 1,
+  "PaymentMethodId": 1,
+  "ReasonForLoss": "because xyz",
+  "Payee": "Payee McPayFace",
+  "NoLossToFirstmac": true,
+  "VisaCardFraudRelated": false
+}

@@ -1,0 +1,14 @@
+{
+  "Title": "Compliance Checklist",
+  "Description": "Review application and complete checklist",
+  "JobTypeId": 386,
+  "Identities": {
+    "TontoApplicationId": [ "115558" ]
+  },
+  "Message": null,
+  "Reason": null,
+  "Partitions": {
+    "Office": [ "Brisbane" ]
+  },
+  "Priority": null  
+}

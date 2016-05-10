@@ -1,0 +1,26 @@
+{
+    "Title": "fits title",
+    "Description": "description",
+    "Category": 1,
+    "ProjectId": 1,
+    "WorkTypeId": 1,
+    "RequestType": "request type" ,
+    "RequiredChanges": "do the things",
+    "ChangeDriverId": 1,
+    "ComplianceDate": "2016-04-01",
+    "Justification": "justification",
+    "FitsPriority": 1,
+    "DepartmentId": 1,
+    "ITEstimate": 2,
+    "MarketingEstimate": 3,
+    "Attachments": [
+      {
+        "filename":"attachment1",
+        "bytes":[1]
+      },
+      {
+        "filename":"attachment1",
+        "bytes":[2]
+      }
+    ]
+}

@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# following command will create the required image
+# docker run --name mongo-activities -d mongo
+
+#stop and start to get new empty database
+
+docker stop mongo-activities
+docker start mongo-activities
+
+# run the node container linked to the mongo container
+docker run --rm -ti \
+       -v $(pwd):/usr/src/app \
+       -w /usr/src/app \
+       -p 3000:3000 \
+       --link mongo-activities \
+       node npm test

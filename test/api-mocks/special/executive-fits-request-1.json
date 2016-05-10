@@ -1,0 +1,18 @@
+{
+    "Title": "fits title",
+    "Description": "description",
+    "FitsPriority": 1,
+    "StartDate": "2016-03-15",
+    "EndDate": "2016-03-20",
+    "Attachments": [
+      {
+        "filename":"attachment1",
+        "bytes":[1]
+      },
+      {
+        "filename":"attachment1",
+        "bytes":[2]
+      }
+    ],
+    "IsExecutiveFits":true
+}

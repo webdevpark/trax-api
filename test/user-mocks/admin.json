@@ -1,0 +1,25 @@
+{
+  "iss": "https://firstmac",
+  "aud": "trax",
+  "exp": 1456376254,
+  "nbf": 1456372654,
+  "nonce": "635919694462669870.MTIxZDFlMmQtYzRjMy00NWRlLTkzZTMtZTVhNTQ2MmFiOTJmMTU0NDA5ZTYtNTVlNC00OWE3LThkZjgtMmFlMWNkZjk2NGY5",
+  "iat": 1456372654,
+  "at_hash": "C1I9jN6V0RhCekaF0XTVyQ",
+  "sid": "798ac3491fb90fb8fabadfd1b11e5d83",
+  "sub": "0C82F6D659EB4B2DA841023F6",
+  "auth_time": 1456372653,
+  "idp": "idsrv",
+  "name": "admin.user@firstmac.com.au",
+  "application_name": "Trax",
+  "crumbs_login_id": "130190",
+  "crumbs_party_role_id": "279371",
+  "email": "admin.user@firstmac.com.au",
+  "http://schemas.firstmac.com.au/ws/2009/12/identity/claims/sitetypeid": "3",
+  "http://schemas.microsoft.com/ws/2008/06/identity/claims/role": "",
+  "site_name": "Trax",
+  "tenant": "trax_crumbs",
+  "amr": [
+    "Cookies"
+  ]
+}

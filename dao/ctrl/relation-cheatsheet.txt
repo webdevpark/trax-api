@@ -1,0 +1,596 @@
+
+
+ActivityEventTypeDump
+---------------------
+
+
+AppointmentClientConfiguration
+------------------------------
+belongs to        JobType                                  as JobType
+belongs to        Role                                     as Role
+
+
+BreakType
+---------
+belongs to        EventType                                as EventType
+
+
+CalendarAppointment
+-------------------
+
+
+CalendarAppointmentAttendee
+---------------------------
+
+
+CheckList
+---------
+has many          CheckListCheckListItemRelationship       as FKChecklistchecklistitemrelationshipChecklistids
+has many          JobType                                  as FKJobtypeChecklistids
+belongs to many   CheckListItem                            as CheckListCheckListItemRelationshipCheckListItems
+belongs to many   WrapUpTemplate                           as JobTypeWrapUpTemplates
+
+
+CheckListCheckListItemRelationship
+----------------------------------
+belongs to        CheckList                                as CheckList
+belongs to        CheckListItem                            as CheckListItem
+
+
+CheckListItem
+-------------
+has many          CheckListCheckListItemRelationship       as FKChecklistchecklistitemrelationshipChecklistitemids
+belongs to many   CheckList                                as CheckListCheckListItemRelationshipCheckLists
+
+
+Communication
+-------------
+has many          CommunicationEntity                      as FKCommunicationentityCommunications
+belongs to        CommunicationPriority                    as Priority
+belongs to        CommunicationType                        as CommunicationType
+belongs to        TimeZone                                 as TimeZone
+belongs to many   CommunicationEntityType                  as CommunicationEntityEntityTypes
+
+
+CommunicationEntity
+-------------------
+belongs to        Communication                            as Communication
+belongs to        CommunicationEntityType                  as EntityType
+
+
+CommunicationEntityType
+-----------------------
+has many          CommunicationEntity                      as FKCommunicationentityCommunicationentitytypes
+belongs to many   Communication                            as CommunicationEntityCommunications
+
+
+CommunicationPriority
+---------------------
+has many          Communication                            as FKCommunicationCommunicationpriorities
+belongs to many   CommunicationType                        as CommunicationCommunicationTypes
+belongs to many   TimeZone                                 as CommunicationTimeZones
+
+
+CommunicationType
+-----------------
+has many          Communication                            as FKCommunicationCommunicationtypes
+belongs to many   CommunicationPriority                    as CommunicationPriorities
+belongs to many   TimeZone                                 as CommunicationTimeZones
+
+
+ComplaintCategory
+-----------------
+
+
+ComplaintEDROrganisation
+------------------------
+
+
+ComplaintLoanType
+-----------------
+
+
+ComplaintStatus
+---------------
+
+
+ComplaintType
+-------------
+
+
+Department
+----------
+has many          DepartmentFitsChangeDriverSet            as FKDepartmentfitschangedriversetDepartment1s
+has many          JobTypeDepartment                        as FKJobtypedepartmentDepartments
+has many          JobTypeUserQA                            as FKJobtypeuserqaDepartments
+has many          QADepartmentJobType                      as FKQadepartmentjobtypeDepartments
+has many          User                                     as FKUserDepartments
+has many          UserDepartment                           as FKUserdepartmentDepartments
+belongs to many   FitsChangeDriverSet                      as DepartmentFitsChangeDriverSetFitsChangeDriverSets
+belongs to many   JobType                                  as JobTypeDepartmentJobTypes
+belongs to many   Role                                     as JobTypeDepartmentRoles
+belongs to many   JobType                                  as JobTypeUserQAJobTypes
+belongs to many   QAType                                   as JobTypeUserQAQATypes
+belongs to many   User                                     as JobTypeUserQAUsers
+belongs to many   JobType                                  as QADepartmentJobTypeJobTypes
+belongs to many   RowStatusType                            as UserRowStatusTypes
+belongs to many   Role                                     as UserDepartmentRoles
+belongs to many   User                                     as UserDepartmentUsers
+
+
+DepartmentFitsChangeDriverSet
+-----------------------------
+belongs to        Department                               as Department
+belongs to        FitsChangeDriverSet                      as FitsChangeDriverSet
+
+
+EventType
+---------
+has many          BreakType                                as FKBreaktypeEventtypes
+
+
+ExpenseCategoryType
+-------------------
+
+
+FilterOperator
+--------------
+has many          JobTypeDepartmentFilter                  as FKJobtypedepartmentfilterFilteroperators
+belongs to many   JobTypeDepartment                        as JobTypeDepartmentFilterJobTypeDepartments
+
+
+FitsCategoryType
+----------------
+
+
+FitsChangeDriverSet
+-------------------
+has many          DepartmentFitsChangeDriverSet            as FKDepartmentfitschangedriversetFitschangedriverset1s
+has many          FitsChangeDriverSetFitsChangeDriverType  as FKFitschangedriversetfitschangedrivertypeFitschangedriversets
+belongs to many   Department                               as DepartmentFitsChangeDriverSetDepartments
+belongs to many   FitsChangeDriverType                     as FitsChangeDriverSetFitsChangeDriverTypeFitsChangeDriverTypes
+
+
+FitsChangeDriverSetFitsChangeDriverType
+---------------------------------------
+belongs to        FitsChangeDriverSet                      as FitsChangeDriverSet
+belongs to        FitsChangeDriverType                     as FitsChangeDriverType
+
+
+FitsChangeDriverType
+--------------------
+has many          FitsChangeDriverSetFitsChangeDriverType  as FKFitschangedriversetfitschangedrivertypeFitschangedrivertypes
+belongs to many   FitsChangeDriverSet                      as FitsChangeDriverSetFitsChangeDriverTypeFitsChangeDriverSets
+
+
+FitsPriority
+------------
+
+
+FitsProjectType
+---------------
+
+
+FitsWorkType
+------------
+
+
+JobLock
+-------
+belongs to        User                                     as User
+
+
+JobStatus
+---------
+has many          JobStatusPartition                       as FKJobstatuspartitionJobstatuses
+belongs to        JobType                                  as JobType
+belongs to        User                                     as AssignedUser
+
+
+JobStatusPartition
+------------------
+belongs to        JobStatus                                as RelatedTraxserial
+
+
+JobType
+-------
+has many          AppointmentClientConfiguration           as FKAppointmenttypeJobtypes
+has many          JobStatus                                as FKJobstatusJobtypes
+has many          JobTypeDefault                           as FKJobtypedefaultJobtypes
+has many          JobTypeDepartment                        as FKJobtypedepartmentJobtypes
+has many          JobTypeFollowUp                          as FKJobtypefollowupJobtypecompleteds
+has many          JobTypeFollowUp                          as FKJobtypefollowupJobtypenews
+has many          JobTypeGate                              as FKJobtypegateJobtypes
+has many          JobTypeOffice                            as FKJobtypeofficeJobtypes
+has many          JobTypeReasonableExpectancy              as FKJobtypeIds
+has many          JobTypeStage                             as FKJobtypestageJobtypes
+has many          JobTypeTrait                             as FKJobtypetraitJobtypes
+has many          JobTypeTriggerPoint                      as FKJobtypetriggerpointJobtypes
+has many          JobTypeUserQA                            as FKJobtypeuserqaJobtypes
+has many          LmtcHoldConfiguration                    as FKLmtcconfigurationJobtypes
+has many          QADepartmentJobType                      as FKQadepartmentjobtypeJobtypes
+has many          TraxWaitingRoom                          as FKTraxwaitingroomJobtypes
+belongs to        CheckList                                as CheckList
+belongs to        WrapUpTemplate                           as WrapUpTemplate
+belongs to many   Role                                     as AppointmentClientConfigurationRoles
+belongs to many   User                                     as JobStatusAssignedUsers
+belongs to many   Department                               as JobTypeDepartmentDepartments
+belongs to many   Role                                     as JobTypeDepartmentRoles
+belongs to many   JobType                                  as JobTypeFollowUpNewJobTypes
+belongs to many   JobType                                  as JobTypeFollowUpCompletedJobTypes
+belongs to many   Role                                     as JobTypeGateRoles
+belongs to many   Office                                   as JobTypeOfficeOffices
+belongs to many   Role                                     as JobTypeOfficeRoles
+belongs to many   Stage                                    as JobTypeStageStages
+belongs to many   Trait                                    as JobTypeTraitTraits
+belongs to many   TriggerPoint                             as JobTypeTriggerPointTriggerPoints
+belongs to many   Department                               as JobTypeUserQADepartments
+belongs to many   QAType                                   as JobTypeUserQAQATypes
+belongs to many   User                                     as JobTypeUserQAUsers
+belongs to many   WrapUpValue                              as LmtcHoldConfigurationWrapUpValues
+belongs to many   LmtcConfiguration                        as LmtcHoldConfigurationLmtcConfigurations
+belongs to many   Department                               as QADepartmentJobTypeDepartments
+
+
+JobTypeDefault
+--------------
+belongs to        JobType                                  as JobType
+
+
+JobTypeDepartment
+-----------------
+has many          JobTypeDepartmentFilter                  as FKJobtypedepartmentfilterJobtypedepartments
+belongs to        Department                               as Department
+belongs to        JobType                                  as JobType
+belongs to        Role                                     as Role
+belongs to many   FilterOperator                           as JobTypeDepartmentFilterFilterOperators
+
+
+JobTypeDepartmentFilter
+-----------------------
+belongs to        FilterOperator                           as FilterOperator
+belongs to        JobTypeDepartment                        as JobTypeDepartment
+
+
+JobTypeFollowUp
+---------------
+belongs to        JobType                                  as CompletedJobType
+belongs to        JobType                                  as NewJobType
+
+
+JobTypeGate
+-----------
+belongs to        JobType                                  as JobType
+belongs to        Role                                     as Role
+
+
+JobTypeOffice
+-------------
+belongs to        JobType                                  as JobType
+belongs to        Office                                   as Office
+belongs to        Role                                     as Role
+
+
+JobTypeReasonableExpectancy
+---------------------------
+belongs to        JobType                                  as JobType
+
+
+JobTypeStage
+------------
+belongs to        JobType                                  as JobType
+belongs to        Stage                                    as Stage
+
+
+JobTypeTrait
+------------
+belongs to        JobType                                  as JobType
+belongs to        Trait                                    as Trait
+
+
+JobTypeTriggerPoint
+-------------------
+has many          TriggerScreenTask                        as FKTriggerscreentaskJobtypetriggerpoints
+has many          TriggerSqlTask                           as FKTriggersqltaskJobtypetriggerpoints
+has many          TriggerWebTask                           as FKTriggerwebtaskTriggerwebtasks
+belongs to        JobType                                  as JobType
+belongs to        TriggerPoint                             as TriggerPoint
+belongs to many   TriggerScreen                            as TriggerScreenTaskTriggerScreens
+belongs to many   TriggerQuery                             as TriggerSqlTaskTriggerQueries
+belongs to many   TriggerUri                               as TriggerWebTaskTriggerUris
+
+
+JobTypeUserQA
+-------------
+belongs to        Department                               as Department
+belongs to        JobType                                  as JobType
+belongs to        QAType                                   as QAType
+belongs to        User                                     as User
+
+
+LmtcConfiguration
+-----------------
+has many          LmtcHoldConfiguration                    as FKLmtcholdconfigurationLmtcconfigurations
+belongs to        LmtcConfigurationType                    as LmtcConfigurationType
+belongs to many   JobType                                  as LmtcHoldConfigurationNextJobTypes
+belongs to many   WrapUpValue                              as LmtcHoldConfigurationWrapUpValues
+
+
+LmtcConfigurationType
+---------------------
+has many          LmtcConfiguration                        as FKLmtcconfigurationLmtcconfigurationtypes
+
+
+LmtcHoldConfiguration
+---------------------
+belongs to        JobType                                  as NextJobType
+belongs to        WrapUpValue                              as WrapUpValue
+belongs to        LmtcConfiguration                        as LmtcConfiguration
+
+
+News
+----
+belongs to        User                                     as CreatedBy
+
+
+Office
+------
+has many          JobTypeOffice                            as FKJobtypeofficeOffices
+has many          UserOffice                               as FKUserofficeOffices
+belongs to many   JobType                                  as JobTypeOfficeJobTypes
+belongs to many   Role                                     as JobTypeOfficeRoles
+belongs to many   Role                                     as UserOfficeRoles
+belongs to many   User                                     as UserOfficeUsers
+
+
+ProductManagerRequestType
+-------------------------
+
+
+PurchaseOrderCompany
+--------------------
+
+
+PurchaseOrderFormType
+---------------------
+
+
+QADepartmentJobType
+-------------------
+belongs to        Department                               as Department
+belongs to        JobType                                  as JobType
+
+
+QAType
+------
+has many          JobTypeUserQA                            as FKJobtypeuserqaQatypes
+belongs to many   Department                               as JobTypeUserQADepartments
+belongs to many   JobType                                  as JobTypeUserQAJobTypes
+belongs to many   User                                     as JobTypeUserQAUsers
+
+
+RefundRequestPaymentMethod
+--------------------------
+
+
+RefundRequestWriteOffType
+-------------------------
+
+
+Role
+----
+has many          AppointmentClientConfiguration           as FKAppointmenttypeRoles
+has many          JobTypeDepartment                        as FKJobtypedepartmentRoles
+has many          JobTypeGate                              as FKJobtypegateRoles
+has many          JobTypeOffice                            as FKJobtypeofficeRoles
+has many          UserDepartment                           as FKUserdepartmentRoles
+has many          UserOffice                               as FKUserofficeRoles
+belongs to many   JobType                                  as AppointmentClientConfigurationJobTypes
+belongs to many   Department                               as JobTypeDepartmentDepartments
+belongs to many   JobType                                  as JobTypeDepartmentJobTypes
+belongs to many   JobType                                  as JobTypeGateJobTypes
+belongs to many   JobType                                  as JobTypeOfficeJobTypes
+belongs to many   Office                                   as JobTypeOfficeOffices
+belongs to many   Department                               as UserDepartmentDepartments
+belongs to many   User                                     as UserDepartmentUsers
+belongs to many   Office                                   as UserOfficeOffices
+belongs to many   User                                     as UserOfficeUsers
+
+
+RowStatusType
+-------------
+has many          User                                     as FKUserRowstatustypes
+has many          WrapUpTemplate                           as FKWrapuptemplateRowstatustypes
+has many          WrapUpTemplateValue                      as FKWrapuptemplatevalueRowstatustypes
+has many          WrapUpValue                              as FKWrapupvalueRowstatustypes
+belongs to many   Department                               as UserReportingdepartments
+belongs to many   WrapUpTemplate                           as WrapUpTemplateValueWrapUpTemplates
+belongs to many   WrapUpValue                              as WrapUpTemplateValueWrapUpValues
+
+
+Stage
+-----
+has many          JobTypeStage                             as FKJobtypestageStages
+belongs to many   JobType                                  as JobTypeStageJobTypes
+
+
+TemplateCategory
+----------------
+has many          TemplateType                             as FKTemplatetypeTemplatecategories
+
+
+TemplateType
+------------
+belongs to        TemplateCategory                         as TemplateCategory
+
+
+TimeZone
+--------
+has many          Communication                            as FKCommunicationTimezones
+belongs to many   CommunicationPriority                    as CommunicationPriorities
+belongs to many   CommunicationType                        as CommunicationCommunicationTypes
+
+
+TrafficLightDashboardApplicationGestationCycle
+----------------------------------------------
+belongs to        TrafficLightDashboardProgressSLAType     as NextProgressSLAType
+
+
+TrafficLightDashboardFlaggedApplicationRuleType
+-----------------------------------------------
+
+
+TrafficLightDashboardFlaggedApplication
+---------------------------------------
+
+
+TrafficLightDashboardProgressSLA
+--------------------------------
+belongs to        TrafficLightDashboardProgressSLAType     as ProgressSLAType
+
+
+TrafficLightDashboardProgressSLAType
+------------------------------------
+has many          TrafficLightDashboardApplicationGestationCycle as FkTldagcNextprogressslatypeids
+has many          TrafficLightDashboardProgressSLA         as FkProgressslatypeids
+has many          TrafficLightDashboardPushSLAType         as FkTrafficlightdashboardpushslatypeProgressslatypeids
+
+
+TrafficLightDashboardPushedSLA
+------------------------------
+
+
+TrafficLightDashboardPushSLAReason
+----------------------------------
+
+
+TrafficLightDashboardPushSLAType
+--------------------------------
+belongs to        TrafficLightDashboardProgressSLAType     as ProgressSLAType
+
+
+Trait
+-----
+has many          JobTypeTrait                             as FKJobtypetraitTraits
+belongs to many   JobType                                  as JobTypeTraitJobTypes
+
+
+TraxUserWorkTimeDetail
+----------------------
+belongs to        User                                     as User
+
+
+TraxWaitingRoom
+---------------
+has many          TraxWaitingRoomCall                      as FKTraxwaitingroomcallTraxwaitingrooms
+belongs to        JobType                                  as JobType
+
+
+TraxWaitingRoomCall
+-------------------
+belongs to        TraxWaitingRoom                          as TraxWaitingRoom
+
+
+TriggerPoint
+------------
+has many          JobTypeTriggerPoint                      as FKJobtypetriggerpointTriggerpoints
+belongs to many   JobType                                  as JobTypeTriggerPointJobTypes
+
+
+TriggerQuery
+------------
+has many          TriggerSqlTask                           as FKTriggersqltaskTriggerqueries
+belongs to many   JobTypeTriggerPoint                      as TriggerSqlTaskJobTypeTriggerPoints
+
+
+TriggerScreen
+-------------
+has many          TriggerScreenTask                        as FKTriggerscreentaskTriggerscreens
+belongs to many   JobTypeTriggerPoint                      as TriggerScreenTaskJobTypeTriggerPoints
+
+
+TriggerScreenTask
+-----------------
+belongs to        JobTypeTriggerPoint                      as JobTypeTriggerPoint
+belongs to        TriggerScreen                            as TriggerScreen
+
+
+TriggerSqlTask
+--------------
+belongs to        JobTypeTriggerPoint                      as JobTypeTriggerPoint
+belongs to        TriggerQuery                             as TriggerQuery
+
+
+TriggerUri
+----------
+has many          TriggerWebTask                           as FKTriggerwebtaskTriggeruris
+belongs to many   JobTypeTriggerPoint                      as TriggerWebTaskJobTypeTriggerPoints
+
+
+TriggerWebTask
+--------------
+belongs to        TriggerUri                               as TriggerUri
+belongs to        JobTypeTriggerPoint                      as JobTypeTriggerPoint
+
+
+User
+----
+has many          JobLock                                  as FKJoblockUsers
+has many          JobStatus                                as FKJobstatusUsers
+has many          JobTypeUserQA                            as FKJobtypeuserqaUsers
+has many          News                                     as FKNewsUsers
+has many          TraxUserWorkTimeDetail                   as FKTraxuserIds
+has many          UserDepartment                           as FKUserdepartmentUsers
+has many          UserOffice                               as FKUserofficeUsers
+belongs to        Department                               as RelatedReportingdepartment
+belongs to        RowStatusType                            as RowStatusType
+belongs to many   JobType                                  as JobStatusJobTypes
+belongs to many   Department                               as JobTypeUserQADepartments
+belongs to many   JobType                                  as JobTypeUserQAJobTypes
+belongs to many   QAType                                   as JobTypeUserQAQATypes
+belongs to many   Department                               as UserDepartmentDepartments
+belongs to many   Role                                     as UserDepartmentRoles
+belongs to many   Office                                   as UserOfficeOffices
+belongs to many   Role                                     as UserOfficeRoles
+
+
+UserDepartment
+--------------
+belongs to        Department                               as Department
+belongs to        Role                                     as Role
+belongs to        User                                     as User
+
+
+UserOffice
+----------
+belongs to        Office                                   as Office
+belongs to        Role                                     as Role
+belongs to        User                                     as User
+
+
+WrapUpTemplate
+--------------
+has many          JobType                                  as FKJobtypeWrapuptemplates
+has many          WrapUpTemplateValue                      as FKWrapuptemplatevalueWrapuptemplates
+belongs to        RowStatusType                            as RowStatusType
+belongs to many   CheckList                                as JobTypeCheckLists
+belongs to many   RowStatusType                            as WrapUpTemplateValueRowStatusTypes
+belongs to many   WrapUpValue                              as WrapUpTemplateValueWrapUpValues
+
+
+WrapUpTemplateValue
+-------------------
+belongs to        RowStatusType                            as RowStatusType
+belongs to        WrapUpTemplate                           as WrapUpTemplate
+belongs to        WrapUpValue                              as WrapUpValue
+
+
+WrapUpValue
+-----------
+has many          LmtcHoldConfiguration                    as FKLmtcconfigurationWrapupvalues
+has many          WrapUpTemplateValue                      as FKWrapuptemplatevalueWrapupvalues
+belongs to        RowStatusType                            as RowStatusType
+belongs to many   JobType                                  as LmtcHoldConfigurationNextJobTypes
+belongs to many   LmtcConfiguration                        as LmtcHoldConfigurationLmtcConfigurations
+belongs to many   RowStatusType                            as WrapUpTemplateValueRowStatusTypes
+belongs to many   WrapUpTemplate                           as WrapUpTemplateValueWrapUpTemplates

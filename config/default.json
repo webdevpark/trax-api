@@ -1,0 +1,70 @@
+{
+
+  "api": {
+    "name": "jobs-api",
+    "version": "0.0.1"
+  },
+
+  "oidc": {
+    "userInfoEndpoint": "https://192.168.56.101/oxauth/seam/resource/restv1/oxauth/userinfo"
+  },
+
+  "request": {
+    "enableStats": true,
+    "enableTriggers": true
+  },
+
+  "tls": {
+    "certificate": "secrets/jobs-api.cer",
+    "key": "secrets/jobs-api.key"
+  },
+
+  "jwt": {
+    "secret":       "secrets/jobs-signing.cer"
+  },  
+
+  "trax-ctrl-db": {
+    "host": "172.21.30.151",
+    "port": 5430,
+    "db": "trax",
+    "username": "postgres",
+    "password": "password"
+  },
+
+  "trax-jobs-db": {
+    "host": "172.23.30.151",
+    "port": "27017",
+    "db": "activities"
+  },
+
+  "trax-jobs-archive-db": {
+    "host": "172.23.30.151",
+    "port": "27017",
+    "db": "traxArchive"
+  },
+
+  "trax-util-db": {
+    "host": "172.23.30.151",
+    "port": "27017",
+    "db": "util"
+  },
+
+  "trax-documents-db": {
+    "host": "172.23.30.151",
+    "port": "27017",
+    "db": "documents"
+  },
+
+  "trax-api-client": {
+    "url": "https://localhost:3000/"
+  },
+
+  "mongoose": {
+    "debug": true
+  },
+
+  "business-hours": {
+    "start": "10:00",
+    "end": "20:30"
+  }
+}

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+
+docker run --rm -ti \
+       -v $(pwd):/usr/src/app \
+       -w /usr/src/app \
+       -p 3000:3000 \
+       --link mongo-activities \
+       node \
+       $@

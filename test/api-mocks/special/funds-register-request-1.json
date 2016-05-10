@@ -1,0 +1,27 @@
+{
+  "Notes": "xyz",
+  "Attachments": [
+    {
+      "filename":"attachment1",
+      "bytes":[1]
+    },
+    {
+      "filename":"attachment1",
+      "bytes":[2]
+    }
+  ],
+  "LineItems": [{
+    "Purpose": "a purpose",
+    "Amount": 1000,
+    "From": {
+      "AccountName": "from account name",
+      "AccountNumber": "from account number",
+      "Bsb": "from account bsb"
+    },
+    "To": {
+      "AccountName": "to account name",
+      "AccountNumber": "to account number",
+      "Bsb": "to account bsb"
+    }
+  }]
+}
